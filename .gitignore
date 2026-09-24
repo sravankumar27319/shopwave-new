@@ -1,0 +1,10 @@
+/src
+**/node_modules
+**/.env
+**/dist
+
+
+
+package-lock.json
+
+

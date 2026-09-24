@@ -1,0 +1,58 @@
+/* Tailwind CSS v4 — CSS-first configuration */
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --color-brand-50: #fdf8f0;
+  --color-brand-100: #faefd9;
+  --color-brand-200: #f4ddb1;
+  --color-brand-300: #ecc57f;
+  --color-brand-400: #e2a44a;
+  --color-brand-500: #d4882a;
+  --color-brand-600: #b86e1f;
+  --color-brand-700: #96561c;
+  --color-brand-800: #7a451d;
+  --color-brand-900: #653a1a;
+
+  --color-stone-950: #0c0a09;
+
+  --radius-card: 0.125rem;
+
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: var(--font-body);
+    background-color: #fafaf9;
+    color: #1c1917;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .skeleton {
+    background: linear-gradient(90deg, #e7e5e4 25%, #d6d3d1 50%, #e7e5e4 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
